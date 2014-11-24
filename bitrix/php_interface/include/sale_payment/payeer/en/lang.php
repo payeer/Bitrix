@@ -1,4 +1,4 @@
-<?
+<?php
 global $MESS;
 $MESS["MERCHANT_URL"] = "Merchant URL";
 $MESS["MERCHANT_URL_DESCR"] = 'The URL for the payment';

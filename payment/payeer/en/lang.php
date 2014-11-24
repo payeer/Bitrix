@@ -1,4 +1,4 @@
-<?
+<?php
 global $MESS;
 $MESS["PAYEER_USER_MESSAGE1"] = "order Error";
 $MESS["PAYEER_USER_MESSAGE2"] = "Order successfully paid";

@@ -1,4 +1,4 @@
-<?
+<?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 include(GetLangFileName(dirname(__FILE__)."/", "/lang.php"));
 
