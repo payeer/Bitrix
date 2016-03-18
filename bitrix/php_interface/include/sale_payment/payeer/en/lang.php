@@ -1,20 +1,18 @@
 <?php
 global $MESS;
 $MESS["MERCHANT_URL"] = "Merchant URL";
-$MESS["MERCHANT_URL_DESCR"] = 'The URL for the payment';
+$MESS["MERCHANT_URL_DESCR"] = "The URL for the payment";
 $MESS["MERCHANT_ID"] = "ID store";
-$MESS["MERCHANT_ID_DESCR"] = 'The store identifier registered in the system "PAYEER".<br/>it can be found in <a href="http://www.payeer.com/account/">Payeer account</a>: "Account -> My store -> Edit".';
-$MESS["SECRET_KEY"] = "secret key";
-$MESS["SECRET_KEY_DESCR"] = 'The secret key notification about the payment,<br/>which is used to verify the integrity of the received information<br/>and unambiguous identification of the sender.<br/>Must match the secret key specified in the <a href="http://www.payeer.com/account/">Payeer account</a>: "Account -> My store -> Edit".';
+$MESS["MERCHANT_ID_DESCR"] = 'The store identifier registered in Payeer';
+$MESS["SECRET_KEY"] = "Secret key";
+$MESS["SECRET_KEY_DESCR"] = "The secret key of merchant";
 $MESS["CURRENCY"] = "Currency";
-$MESS["ORDER_DESCRIPTION"] = "Order description";
-$MESS["ORDER_DESCRIPTION_DESCR"] = "Additional comment that is displayed when the payment";
 $MESS["PAYEER_LOG"] = "The path to the log file for payments via Payeer (for example, /payeer_orders.log)";
-$MESS["PAYEER_LOG_DESCR"] = 'If path is not specified, the log is not written';
+$MESS["PAYEER_LOG_DESCR"] = "If path is not specified, the log is not written";
 $MESS["IPFILTER"] = "IP - filter";
-$MESS["IPFILTER_DESCR"] = 'The list of trusted ip addresses, you can specify the mask';
+$MESS["IPFILTER_DESCR"] = "The list of trusted ip addresses, you can specify the mask";
 $MESS["EMAILERR"] = "Email for errors";
-$MESS["EMAILERR_DESCR"] = 'Email to send payment errors';
+$MESS["EMAILERR_DESCR"] = "Email to send payment errors";
 $MESS["ORDER_ID"] = "Order ID";
 $MESS["SHOULD_PAY"] = "The amount to be paid";
 
@@ -36,4 +34,8 @@ $MESS["EMAIL_BODY3"] = "   trusted ip: ";
 $MESS["EMAIL_BODY4"] = "   ip of the current server: ";
 $MESS["EMAIL_BODY5"] = " - Do not match the digital signature\n";
 $MESS["EMAIL_BODY6"] = " - The payment status is not success\n";
+$MESS["EMAIL_BODY7"] = " - Undefined order id\n";
+$MESS["EMAIL_BODY8"] = " - Wrong amount\n";
+$MESS["EMAIL_BODY9"] = " - Wrong currency\n";
+$MESS["EMAIL_BODY10"] = " - The order is already checked\n";
 ?>

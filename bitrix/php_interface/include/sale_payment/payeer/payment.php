@@ -1,7 +1,7 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-include(GetLangFileName(dirname(__FILE__)."/", "/lang.php"));
+include(GetLangFileName(dirname(__FILE__) . "/", "/lang.php"));
 
 $m_url = CSalePaySystemAction::GetParamValue("MERCHANT_URL");
 $m_shop = CSalePaySystemAction::GetParamValue("MERCHANT_ID");
@@ -10,7 +10,9 @@ $m_key = CSalePaySystemAction::GetParamValue("SECRET_KEY");
 $m_orderid = CSalePaySystemAction::GetParamValue("ORDER_ID");
 $m_amount = number_format(CSalePaySystemAction::GetParamValue("SHOULD_PAY"), 2, '.', '');
 $m_curr = CSalePaySystemAction::GetParamValue("CURRENCY");
-$m_desc =  base64_encode(CSalePaySystemAction::GetParamValue("ORDER_DESCRIPTION"));
+$m_curr = $m_curr == 'RUR' ? 'RUB' : $m_curr;
+$arOrder = CSaleOrder::GetByID($m_orderid);
+$m_desc =  base64_encode($arOrder['USER_DESCRIPTION']);
 
 $arHash = array(
 	$m_shop,
@@ -20,6 +22,7 @@ $arHash = array(
 	$m_desc,
 	$m_key
 );
+
 $sign = strtoupper(hash('sha256', implode(":", $arHash)));
 ?>
 
