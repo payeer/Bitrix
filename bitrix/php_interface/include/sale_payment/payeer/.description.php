@@ -10,7 +10,7 @@ $arPSCorrespondence = array(
 	"MERCHANT_URL" => array(
 		"NAME" => GetMessage("MERCHANT_URL"),
 		"DESCR" => GetMessage("MERCHANT_URL_DESCR"),
-		"VALUE" => "//payeer.com/merchant/",
+		"VALUE" => "https://payeer.com/merchant/",
 		"TYPE" => ""
 	),
 	"MERCHANT_ID" => array(
@@ -22,12 +22,6 @@ $arPSCorrespondence = array(
 	"SECRET_KEY" => array(
 		"NAME" => GetMessage("SECRET_KEY"),
 		"DESCR" => GetMessage("SECRET_KEY_DESCR"),
-		"VALUE" => "",
-		"TYPE" => ""
-	),
-	"ORDER_DESCRIPTION" => array(
-		"NAME" => GetMessage("ORDER_DESCRIPTION"),
-		"DESCR" => GetMessage("ORDER_DESCRIPTION_DESC"),
 		"VALUE" => "",
 		"TYPE" => ""
 	),
