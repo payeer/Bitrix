@@ -110,7 +110,7 @@ if (isset($_POST["m_operation_id"]) && isset($_POST["m_sign"]))
 				$order_curr = $arOrder["CURRENCY"] == 'RUR' ? 'RUB' : $arOrder["CURRENCY"];
 				$order_amount = number_format($arOrder["PRICE"], 2, '.', '');
 				
-				// проверка суммы, валюты и статуса
+				// проверка суммы, валюты
 			
 				if ($_POST['m_amount'] != $order_amount)
 				{
@@ -124,12 +124,6 @@ if (isset($_POST["m_operation_id"]) && isset($_POST["m_sign"]))
 					$err = true;
 				}
 				
-				if ($arOrder["PAYED"] != "N")
-				{
-					$message .= GetMessage("EMAIL_BODY10");
-					$err = true;
-				}
-
 				// проверка статуса
 				
 				if (!$err)
@@ -137,8 +131,13 @@ if (isset($_POST["m_operation_id"]) && isset($_POST["m_sign"]))
 					switch ($_POST['m_status'])
 					{
 						case 'success':
-							CSaleOrder::PayOrder($arOrder["ID"], "Y", false);
-							CSaleOrder::StatusOrder($arOrder["ID"], "F");
+						
+							if ($arOrder["PAYED"] == "N")
+							{
+								CSaleOrder::PayOrder($arOrder["ID"], "Y", false);
+								CSaleOrder::StatusOrder($arOrder["ID"], "F");
+							}
+							
 							break;
 							
 						default:

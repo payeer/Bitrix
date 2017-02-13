@@ -37,5 +37,4 @@ $MESS["EMAIL_BODY6"] = " - The payment status is not success\n";
 $MESS["EMAIL_BODY7"] = " - Undefined order id\n";
 $MESS["EMAIL_BODY8"] = " - Wrong amount\n";
 $MESS["EMAIL_BODY9"] = " - Wrong currency\n";
-$MESS["EMAIL_BODY10"] = " - The order is already checked\n";
 ?>
